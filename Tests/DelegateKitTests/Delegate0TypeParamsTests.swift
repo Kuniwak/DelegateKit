@@ -86,7 +86,7 @@ class Delegate0Unit2Spy: DelegateSeed {
 class Delegate0Holder1 {
     // This is a declaration for the delegate. It means the delegate is a Delegate0Unit1 and the delegate have
     // no type parameters and the delegate take no parameters.
-    var delegates: [WeakAnyDelegate0<Delegate0Unit1, Void>] = []
+    var delegates: [WeakAnyDelegate<Delegate0Unit1, Void>] = []
 
 
     func notifyToDelegates() {
@@ -99,7 +99,7 @@ class Delegate0Holder1 {
 
 
 class Delegate0Holder2 {
-    var delegates: [WeakAnyDelegate0<Delegate0Unit2, Void>] = []
+    var delegates: [WeakAnyDelegate<Delegate0Unit2, Void>] = []
 
 
     func notifyToDelegates() {

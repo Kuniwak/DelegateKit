@@ -88,7 +88,7 @@ class Delegate1Unit2Spy<T>: DelegateSeed {
 
 
 class Delegate1Holder1<T> {
-    var delegates: [WeakAnyDelegate0<Delegate1Unit1, AnyGeneric<T>>] = []
+    var delegates: [WeakAnyDelegate<Delegate1Unit1, AnyGeneric<T>>] = []
 
 
     func notifyToDelegates(_ x: T) {
@@ -101,7 +101,7 @@ class Delegate1Holder1<T> {
 
 
 class Delegate1Holder2<T> {
-    var delegates: [WeakAnyDelegate0<Delegate1Unit2, AnyGeneric<T>>] = []
+    var delegates: [WeakAnyDelegate<Delegate1Unit2, AnyGeneric<T>>] = []
 
 
     func notifyToDelegates(_ x: T) {
