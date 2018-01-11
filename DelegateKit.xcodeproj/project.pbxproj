@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		2475E40997F5F5B589C62640 /* Delegate1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EBAE4EB990E586DF66BB /* Delegate1Tests.swift */; };
 		2475E6DA9E2133910FE5EA62 /* DelegateKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E1D2D7A219204A171451 /* DelegateKit.swift */; };
 		2475ED4DD688F5A959B4B7D2 /* Delegate0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E18B7512E8CAC48331D1 /* Delegate0Tests.swift */; };
 		OBJ_21 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		2475E18B7512E8CAC48331D1 /* Delegate0Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegate0Tests.swift; sourceTree = "<group>"; };
 		2475E1D2D7A219204A171451 /* DelegateKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateKit.swift; sourceTree = "<group>"; };
+		2475EBAE4EB990E586DF66BB /* Delegate1Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegate1Tests.swift; sourceTree = "<group>"; };
 		"DelegateKit::DelegateKit::Product" /* DelegateKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DelegateKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"DelegateKit::DelegateKitTests::Product" /* DelegateKitTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = DelegateKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* DelegateKitSimplestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateKitSimplestTests.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			children = (
 				OBJ_12 /* DelegateKitSimplestTests.swift */,
 				2475E18B7512E8CAC48331D1 /* Delegate0Tests.swift */,
+				2475EBAE4EB990E586DF66BB /* Delegate1Tests.swift */,
 			);
 			name = DelegateKitTests;
 			path = Tests/DelegateKitTests;
@@ -221,6 +224,7 @@
 			files = (
 				OBJ_27 /* DelegateKitSimplestTests.swift in Sources */,
 				2475ED4DD688F5A959B4B7D2 /* Delegate0Tests.swift in Sources */,
+				2475E40997F5F5B589C62640 /* Delegate1Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
