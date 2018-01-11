@@ -21,10 +21,11 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		2475E6DA9E2133910FE5EA62 /* DelegateKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E1D2D7A219204A171451 /* DelegateKit.swift */; };
+		2475ED4DD688F5A959B4B7D2 /* Delegate0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E18B7512E8CAC48331D1 /* Delegate0Tests.swift */; };
 		OBJ_21 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_27 /* DelegateKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* DelegateKitTests.swift */; };
+		OBJ_27 /* DelegateKitSimplestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* DelegateKitSimplestTests.swift */; };
 		OBJ_29 /* DelegateKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "DelegateKit::DelegateKit::Product" /* DelegateKit.framework */; };
-		OBJ_36 /* DelegateKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* DelegateKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,24 +33,25 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "DelegateKit::DelegateKit";
+			remoteGlobalIDString = DelegateKit::DelegateKit;
 			remoteInfo = DelegateKit;
 		};
 		62B10B4C2007876100D8FF4D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "DelegateKit::DelegateKitTests";
+			remoteGlobalIDString = DelegateKit::DelegateKitTests;
 			remoteInfo = DelegateKitTests;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2475E18B7512E8CAC48331D1 /* Delegate0Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegate0Tests.swift; sourceTree = "<group>"; };
+		2475E1D2D7A219204A171451 /* DelegateKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateKit.swift; sourceTree = "<group>"; };
 		"DelegateKit::DelegateKit::Product" /* DelegateKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DelegateKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"DelegateKit::DelegateKitTests::Product" /* DelegateKitTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = DelegateKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_12 /* DelegateKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateKitTests.swift; sourceTree = "<group>"; };
+		OBJ_12 /* DelegateKitSimplestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateKitSimplestTests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_9 /* DelegateKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +84,8 @@
 		OBJ_11 /* DelegateKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_12 /* DelegateKitTests.swift */,
+				OBJ_12 /* DelegateKitSimplestTests.swift */,
+				2475E18B7512E8CAC48331D1 /* Delegate0Tests.swift */,
 			);
 			name = DelegateKitTests;
 			path = Tests/DelegateKitTests;
@@ -119,7 +122,7 @@
 		OBJ_8 /* DelegateKit */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_9 /* DelegateKit.swift */,
+				2475E1D2D7A219204A171451 /* DelegateKit.swift */,
 			);
 			name = DelegateKit;
 			path = Sources/DelegateKit;
@@ -216,7 +219,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_27 /* DelegateKitTests.swift in Sources */,
+				OBJ_27 /* DelegateKitSimplestTests.swift in Sources */,
+				2475ED4DD688F5A959B4B7D2 /* Delegate0Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_36 /* DelegateKit.swift in Sources */,
+				2475E6DA9E2133910FE5EA62 /* DelegateKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
