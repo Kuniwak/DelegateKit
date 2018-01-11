@@ -4,7 +4,7 @@ import DelegateKit
 
 
 
-class Delegate1Tests: XCTestCase {
+class Delegate1TypeParamsTests: XCTestCase {
     func testExample1() {
         let spy = Delegate1Unit1Spy<Void>()
 
@@ -15,8 +15,6 @@ class Delegate1Tests: XCTestCase {
 
         XCTAssertEqual(spy.callArgs, [.didCall])
     }
-
-
     func testExample2() {
         let spy = Delegate1Unit2Spy<Void>()
 

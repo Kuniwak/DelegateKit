@@ -4,7 +4,7 @@ import DelegateKit
 
 
 
-class Delegate0Tests: XCTestCase {
+class Delegate0TypeParamsTests: XCTestCase {
     func testExample1() {
         let spy = Delegate0Unit1Spy()
 
