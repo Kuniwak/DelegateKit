@@ -11,9 +11,9 @@ class DelegateSeedTests: XCTestCase {
         let holder = DelegateSeedHolder()
         holder.delegates.append(spy.asAny())
 
-        holder.notifyToDelegates()
+        holder.notifyToDelegates(.a)
 
-        XCTAssertEqual(spy.callArgs, [.didCall])
+        XCTAssertEqual(spy.callArgs, [.didCall(.a)])
     }
 
 
@@ -38,33 +38,49 @@ class DelegateSeedTests: XCTestCase {
 
 class DelegateSeedSpy: DelegateSeed {
     // This code means that the delegate can take a Void parameter.
-    typealias P = Void
+    typealias P = Event
 
 
     private(set) var callArgs: [CallArgs] = []
 
 
-    func didCall(_ parameters: Void) {
-        self.callArgs.append(.didCall)
+    func didCall(_ parameters: Event) {
+        self.callArgs.append(.didCall(parameters))
     }
 
 
-    enum CallArgs {
-        case didCall
+    enum Event {
+        case a
+        case b
+        case c
+    }
+
+
+    enum CallArgs: Equatable {
+        case didCall(Event)
+
+        static func ==(lhs: CallArgs, rhs: CallArgs) -> Bool {
+            switch (lhs, rhs) {
+            case let (.didCall(l), .didCall(r)):
+                return l == r
+            }
+        }
     }
 }
 
 
 
 class DelegateSeedHolder {
+    typealias Event = DelegateSeedSpy.Event
+
     // This is a declaration for the delegate. It means the delegate is a DelegateSeed1 and the delegate have
     // no type parameters and the delegate take no parameters.
-    var delegates: [AnyDelegate<Void>] = []
+    var delegates: [AnyDelegate<Event>] = []
 
 
-    func notifyToDelegates() {
+    func notifyToDelegates(_ event: Event) {
         for delegate in self.delegates {
-            delegate.didCall(())
+            delegate.didCall(event)
         }
     }
 }
