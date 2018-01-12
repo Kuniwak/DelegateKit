@@ -4,25 +4,25 @@ import DelegateKit
 
 
 
-class DelegateSeedTests: XCTestCase {
+class DelegateBagTests: XCTestCase {
     func testExample() {
-        let spy = DelegateSeedSpy()
+        let spy = DelegateBagSpy()
 
-        let holder = DelegateSeedHolder()
-        holder.delegate = spy.asAny()
+        let holder = DelegateBagHolder()
+        holder.delegates.add(spy.asAny())
 
-        holder.notifyToDelegate(.a)
+        holder.notifyToDelegates(.a)
 
         XCTAssertEqual(spy.callArgs, [.didCall(.a)])
     }
 
 
     func testMemoryLeak() {
-        var spy: DelegateSeedSpy? = DelegateSeedSpy()
+        var spy: DelegateBagSpy? = DelegateBagSpy()
         let weakSpy = spy!.asAny()
 
-        let holder = DelegateSeedHolder()
-        holder.delegate = weakSpy
+        let holder = DelegateBagHolder()
+        holder.delegates.add(weakSpy)
 
         spy = nil
         XCTAssertTrue(weakSpy.isEmpty)
@@ -37,7 +37,7 @@ class DelegateSeedTests: XCTestCase {
 
 
 
-class DelegateSeedSpy: DelegateSeed {
+class DelegateBagSpy: DelegateSeed {
     typealias P = Event
 
 
@@ -70,14 +70,14 @@ class DelegateSeedSpy: DelegateSeed {
 
 
 
-class DelegateSeedHolder {
-    typealias Event = DelegateSeedSpy.Event
+class DelegateBagHolder {
+    typealias Event = DelegateBagSpy.Event
 
 
-    var delegate: AnyDelegate<Event>?
+    var delegates = DelegateBag<Event>()
 
 
-    func notifyToDelegate(_ event: Event) {
-        self.delegate?.didCall(event)
+    func notifyToDelegates(_ event: Event) {
+        self.delegates.didCall(event)
     }
 }

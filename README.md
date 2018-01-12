@@ -1,3 +1,8 @@
 # DelegateKit
 
-A description of this package.
+An experimental project for utility for Delegates.
+
+
+```swift
+
+```
