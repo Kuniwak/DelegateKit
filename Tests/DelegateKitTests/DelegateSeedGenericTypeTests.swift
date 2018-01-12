@@ -23,9 +23,6 @@ class DelegateSeedGenericTypeTests: XCTestCase {
 }
 
 
-enum GenericDelegate {}
-
-
 
 enum AnyGeneric<T> {
     case x(T)
@@ -34,7 +31,6 @@ enum AnyGeneric<T> {
 
 
 class GenericDelegateSpy<T>: DelegateSeed {
-    typealias U = GenericDelegate
     typealias P = AnyGeneric<T>
 
 
@@ -54,7 +50,7 @@ class GenericDelegateSpy<T>: DelegateSeed {
 
 
 class GenericDelegateHolder<T> {
-    var delegates: [AnyDelegate<GenericDelegate, AnyGeneric<T>>] = []
+    var delegates: [AnyDelegate<AnyGeneric<T>>] = []
 
 
     func notifyToDelegates(_ x: T) {

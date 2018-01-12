@@ -1,5 +1,4 @@
 public protocol DelegateChain {
-    associatedtype U
     associatedtype P
 
     var isEmpty: Bool { get }
@@ -10,15 +9,14 @@ public protocol DelegateChain {
 
 
 extension DelegateChain {
-    public func asAny() -> AnyDelegate<U, P> {
+    public func asAny() -> AnyDelegate<P> {
         return AnyDelegate(.body(AnyStrongDelegateChain(wrapping: self)))
     }
 }
 
 
 
-public class AnyStrongDelegateChain<Unit, Params>: DelegateChain {
-    public typealias U = Unit
+public class AnyStrongDelegateChain<Params>: DelegateChain {
     public typealias P = Params
 
 
@@ -33,7 +31,7 @@ public class AnyStrongDelegateChain<Unit, Params>: DelegateChain {
 
     public init<Delegate: DelegateChain>(
         wrapping delegate: Delegate
-    ) where Delegate.U == Unit, Delegate.P == Params {
+    ) where Delegate.P == Params {
         self.didCallFunc = { params in
             delegate.didCall(params)
         }

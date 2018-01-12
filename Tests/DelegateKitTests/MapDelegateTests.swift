@@ -42,12 +42,7 @@ class ComposeDelegateTests: XCTestCase {
 
 
 
-enum ComposeDelegateUnit {}
-
-
-
 class ComposeDelegateUnitSpy: DelegateSeed {
-    typealias U = ComposeDelegateUnit
     typealias P = String
 
 
@@ -74,7 +69,7 @@ class ComposeDelegateUnitSpy: DelegateSeed {
 
 
 class ComposeDelegateHolder {
-    var delegates: [AnyDelegate<ComposeDelegateUnit, Int>] = []
+    var delegates: [AnyDelegate<Int>] = []
 
 
     func notifyToDelegates(_ source: Int) {

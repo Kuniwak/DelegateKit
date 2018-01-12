@@ -48,15 +48,9 @@ class DelegateSeedTests: XCTestCase {
 }
 
 
-// These are unique types that identify delegate types.
-enum DelegateUnit1 {}
-enum DelegateUnit2 {}
-
-
 
 class DelegateUnit1Spy: DelegateSeed {
-    // This code means that the class implement Delegate represents DelegateUnit1.
-    typealias U = DelegateUnit1
+    // This code means that the delegate can take a Void parameter.
     typealias P = Void
 
 
@@ -76,7 +70,6 @@ class DelegateUnit1Spy: DelegateSeed {
 
 
 class DelegateUnit2Spy: DelegateSeed {
-    typealias U = DelegateUnit2
     typealias P = Void
 
 
@@ -98,7 +91,7 @@ class DelegateUnit2Spy: DelegateSeed {
 class DelegateUnit1Holder {
     // This is a declaration for the delegate. It means the delegate is a DelegateUnit1 and the delegate have
     // no type parameters and the delegate take no parameters.
-    var delegates: [AnyDelegate<DelegateUnit1, Void>] = []
+    var delegates: [AnyDelegate<Void>] = []
 
 
     func notifyToDelegates() {
@@ -111,7 +104,7 @@ class DelegateUnit1Holder {
 
 
 class DelegateUnit2Holder {
-    var delegates: [AnyDelegate<DelegateUnit2, Void>] = []
+    var delegates: [AnyDelegate<Void>] = []
 
 
     func notifyToDelegates() {

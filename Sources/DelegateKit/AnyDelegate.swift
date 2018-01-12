@@ -1,5 +1,5 @@
-public class AnyDelegate<Unit, Params> {
-    private let chain: Chain<Unit, Params>
+public class AnyDelegate<Params> {
+    private let chain: Chain<Params>
 
 
     public var isEmpty: Bool {
@@ -22,18 +22,18 @@ public class AnyDelegate<Unit, Params> {
     }
 
 
-    public init(_ chain: Chain<Unit, Params>) {
+    public init(_ chain: Chain<Params>) {
         self.chain = chain
     }
 
 
-    public func asAny() -> AnyDelegate<Unit, Params> {
+    public func asAny() -> AnyDelegate<Params> {
         return self
     }
 
 
-    public enum Chain<Unit, Params> {
-        case head(AnyWeakDelegateChain<Unit, Params>)
-        case body(AnyStrongDelegateChain<Unit, Params>)
+    public enum Chain<Params> {
+        case head(AnyWeakDelegateChain<Params>)
+        case body(AnyStrongDelegateChain<Params>)
     }
 }

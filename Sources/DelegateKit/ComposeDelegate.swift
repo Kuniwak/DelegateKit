@@ -1,9 +1,8 @@
-public class ComposeDelegate<Unit, Source, Domain>: DelegateChain {
-    public typealias U = Unit
+public class ComposeDelegate<Source, Domain>: DelegateChain {
     public typealias P = Source
 
 
-    private let domain: AnyDelegate<Unit, Domain>
+    private let domain: AnyDelegate<Domain>
     private let block: (Source) -> Domain
 
 
@@ -15,7 +14,7 @@ public class ComposeDelegate<Unit, Source, Domain>: DelegateChain {
     public init<Delegate: DelegateChain>(
         _ delegate: Delegate,
         _ block: @escaping (Source) -> Domain
-    ) where Delegate.U == U, Delegate.P == Domain {
+    ) where Delegate.P == Domain {
         self.domain = delegate.asAny()
         self.block = block
     }
@@ -31,7 +30,7 @@ public class ComposeDelegate<Unit, Source, Domain>: DelegateChain {
 extension DelegateChain {
     public func compose<AnotherParams>(
         _ block: @escaping (AnotherParams) -> P
-    ) -> ComposeDelegate<U, AnotherParams, P> {
-        return ComposeDelegate<U, AnotherParams, P>(self, block)
+    ) -> ComposeDelegate<AnotherParams, P> {
+        return ComposeDelegate<AnotherParams, P>(self, block)
     }
 }

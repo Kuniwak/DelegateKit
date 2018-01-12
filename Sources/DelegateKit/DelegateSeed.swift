@@ -1,5 +1,4 @@
 public protocol DelegateSeed: class {
-    associatedtype U
     associatedtype P
 
     func didCall(_ parameters: P)
@@ -8,15 +7,14 @@ public protocol DelegateSeed: class {
 
 
 extension DelegateSeed {
-    public func asAny() -> AnyDelegate<U, P> {
-        return AnyDelegate(.head(AnyWeakDelegateChain<U, P>(wrapping: self)))
+    public func asAny() -> AnyDelegate<P> {
+        return AnyDelegate(.head(AnyWeakDelegateChain<P>(wrapping: self)))
     }
 }
 
 
 
-public class AnyWeakDelegateChain<Unit, Params>: DelegateChain {
-    public typealias U = Unit
+public class AnyWeakDelegateChain<Params>: DelegateChain {
     public typealias P = Params
 
 
@@ -31,7 +29,7 @@ public class AnyWeakDelegateChain<Unit, Params>: DelegateChain {
 
     public init<Delegate: DelegateSeed>(
         wrapping delegate: Delegate
-    ) where Delegate.U == Unit, Delegate.P == Params {
+    ) where Delegate.P == Params {
         self.didCallFunc = { [weak weakDelegate = delegate] params in
             weakDelegate?.didCall(params)
         }
