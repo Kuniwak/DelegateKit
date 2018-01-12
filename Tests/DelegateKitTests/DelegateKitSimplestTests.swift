@@ -15,6 +15,19 @@ class DelegateKitSimplestTests: XCTestCase {
     }
 
 
+    func testMemoryLeak() {
+        var spy: SimplestExampleDelegateSpy? = SimplestExampleDelegateSpy()
+        weak var weakSpy = spy
+
+        let holder = SimplestDelegateHolder()
+        holder.delegate = spy
+
+        spy = nil
+
+        XCTAssertNil(weakSpy)
+    }
+
+
     static var allTests = [
         ("testExample", testExample),
     ]

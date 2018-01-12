@@ -4,12 +4,12 @@ import DelegateKit
 
 
 
-class Delegate0TypeParamsTests: XCTestCase {
+class DelegateSeedTests: XCTestCase {
     func testExample1() {
-        let spy = Delegate0Unit1Spy()
+        let spy = DelegateUnit1Spy()
 
-        let holder = Delegate0Holder1()
-        holder.delegates.append(spy.asWeakAny())
+        let holder = DelegateUnit1Holder()
+        holder.delegates.append(spy.asAny())
 
         holder.notifyToDelegates()
 
@@ -18,14 +18,26 @@ class Delegate0TypeParamsTests: XCTestCase {
 
 
     func testExample2() {
-        let spy = Delegate0Unit2Spy()
+        let spy = DelegateUnit2Spy()
 
-        let holder = Delegate0Holder2()
-        holder.delegates.append(spy.asWeakAny())
+        let holder = DelegateUnit2Holder()
+        holder.delegates.append(spy.asAny())
 
         holder.notifyToDelegates()
 
         XCTAssertEqual(spy.callArgs, [.didCall])
+    }
+
+
+    func testMemoryLeak() {
+        var spy: DelegateUnit1Spy? = DelegateUnit1Spy()
+        let weakSpy = spy!.asAny()
+
+        let holder = DelegateUnit1Holder()
+        holder.delegates.append(weakSpy)
+
+        spy = nil
+        XCTAssertTrue(weakSpy.isEmpty)
     }
 
 
@@ -37,14 +49,14 @@ class Delegate0TypeParamsTests: XCTestCase {
 
 
 // These are unique types that identify delegate types.
-enum Delegate0Unit1 {}
-enum Delegate0Unit2 {}
+enum DelegateUnit1 {}
+enum DelegateUnit2 {}
 
 
 
-class Delegate0Unit1Spy: DelegateSeed {
-    // This code means that the class implement Delegate0 represents Delegate0Unit1.
-    typealias U = Delegate0Unit1
+class DelegateUnit1Spy: DelegateSeed {
+    // This code means that the class implement Delegate represents DelegateUnit1.
+    typealias U = DelegateUnit1
     typealias P = Void
 
 
@@ -63,8 +75,8 @@ class Delegate0Unit1Spy: DelegateSeed {
 
 
 
-class Delegate0Unit2Spy: DelegateSeed {
-    typealias U = Delegate0Unit2
+class DelegateUnit2Spy: DelegateSeed {
+    typealias U = DelegateUnit2
     typealias P = Void
 
 
@@ -83,10 +95,10 @@ class Delegate0Unit2Spy: DelegateSeed {
 
 
 
-class Delegate0Holder1 {
-    // This is a declaration for the delegate. It means the delegate is a Delegate0Unit1 and the delegate have
+class DelegateUnit1Holder {
+    // This is a declaration for the delegate. It means the delegate is a DelegateUnit1 and the delegate have
     // no type parameters and the delegate take no parameters.
-    var delegates: [WeakAnyDelegate<Delegate0Unit1, Void>] = []
+    var delegates: [AnyDelegate<DelegateUnit1, Void>] = []
 
 
     func notifyToDelegates() {
@@ -98,8 +110,8 @@ class Delegate0Holder1 {
 
 
 
-class Delegate0Holder2 {
-    var delegates: [WeakAnyDelegate<Delegate0Unit2, Void>] = []
+class DelegateUnit2Holder {
+    var delegates: [AnyDelegate<DelegateUnit2, Void>] = []
 
 
     func notifyToDelegates() {

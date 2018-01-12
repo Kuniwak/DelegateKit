@@ -21,9 +21,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		2475E40997F5F5B589C62640 /* Delegate1TypeParamsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EBAE4EB990E586DF66BB /* Delegate1TypeParamsTests.swift */; };
+		2475E40997F5F5B589C62640 /* DelegateSeedGenericTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EBAE4EB990E586DF66BB /* DelegateSeedGenericTypeTests.swift */; };
 		2475E6DA9E2133910FE5EA62 /* DelegateKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E1D2D7A219204A171451 /* DelegateKit.swift */; };
-		2475ED4DD688F5A959B4B7D2 /* Delegate0TypeParamsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E18B7512E8CAC48331D1 /* Delegate0TypeParamsTests.swift */; };
+		2475EAD88770EF08518A9FB4 /* MapDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E1ED6C812C7ED0950BAE /* MapDelegateTests.swift */; };
+		2475ED4DD688F5A959B4B7D2 /* DelegateSeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E18B7512E8CAC48331D1 /* DelegateSeedTests.swift */; };
 		OBJ_21 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_27 /* DelegateKitSimplestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* DelegateKitSimplestTests.swift */; };
 		OBJ_29 /* DelegateKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "DelegateKit::DelegateKit::Product" /* DelegateKit.framework */; };
@@ -34,22 +35,23 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DelegateKit::DelegateKit;
+			remoteGlobalIDString = "DelegateKit::DelegateKit";
 			remoteInfo = DelegateKit;
 		};
 		62B10B4C2007876100D8FF4D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DelegateKit::DelegateKitTests;
+			remoteGlobalIDString = "DelegateKit::DelegateKitTests";
 			remoteInfo = DelegateKitTests;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2475E18B7512E8CAC48331D1 /* Delegate0TypeParamsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegate0TypeParamsTests.swift; sourceTree = "<group>"; };
+		2475E18B7512E8CAC48331D1 /* DelegateSeedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateSeedTests.swift; sourceTree = "<group>"; };
 		2475E1D2D7A219204A171451 /* DelegateKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateKit.swift; sourceTree = "<group>"; };
-		2475EBAE4EB990E586DF66BB /* Delegate1TypeParamsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegate1TypeParamsTests.swift; sourceTree = "<group>"; };
+		2475E1ED6C812C7ED0950BAE /* MapDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDelegateTests.swift; sourceTree = "<group>"; };
+		2475EBAE4EB990E586DF66BB /* DelegateSeedGenericTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateSeedGenericTypeTests.swift; sourceTree = "<group>"; };
 		"DelegateKit::DelegateKit::Product" /* DelegateKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DelegateKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"DelegateKit::DelegateKitTests::Product" /* DelegateKitTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = DelegateKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* DelegateKitSimplestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateKitSimplestTests.swift; sourceTree = "<group>"; };
@@ -81,18 +83,20 @@
 				OBJ_11 /* DelegateKitTests */,
 			);
 			name = Tests;
-			sourceTree = SOURCE_ROOT;
+			path = Tests;
+			sourceTree = "<group>";
 		};
 		OBJ_11 /* DelegateKitTests */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_12 /* DelegateKitSimplestTests.swift */,
-				2475E18B7512E8CAC48331D1 /* Delegate0TypeParamsTests.swift */,
-				2475EBAE4EB990E586DF66BB /* Delegate1TypeParamsTests.swift */,
+				2475EBAE4EB990E586DF66BB /* DelegateSeedGenericTypeTests.swift */,
+				2475E18B7512E8CAC48331D1 /* DelegateSeedTests.swift */,
+				2475E1ED6C812C7ED0950BAE /* MapDelegateTests.swift */,
 			);
 			name = DelegateKitTests;
-			path = Tests/DelegateKitTests;
-			sourceTree = SOURCE_ROOT;
+			path = DelegateKitTests;
+			sourceTree = "<group>";
 		};
 		OBJ_13 /* Products */ = {
 			isa = PBXGroup;
@@ -103,13 +107,13 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
-				OBJ_6 /* Package.swift */,
+				OBJ_13 /* Products */,
 				OBJ_7 /* Sources */,
 				OBJ_10 /* Tests */,
-				OBJ_13 /* Products */,
+				OBJ_6 /* Package.swift */,
 			);
 			name = "";
 			sourceTree = "<group>";
@@ -120,7 +124,8 @@
 				OBJ_8 /* DelegateKit */,
 			);
 			name = Sources;
-			sourceTree = SOURCE_ROOT;
+			path = Sources;
+			sourceTree = "<group>";
 		};
 		OBJ_8 /* DelegateKit */ = {
 			isa = PBXGroup;
@@ -128,8 +133,8 @@
 				2475E1D2D7A219204A171451 /* DelegateKit.swift */,
 			);
 			name = DelegateKit;
-			path = Sources/DelegateKit;
-			sourceTree = SOURCE_ROOT;
+			path = DelegateKit;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -196,7 +201,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_13 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -223,8 +228,9 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_27 /* DelegateKitSimplestTests.swift in Sources */,
-				2475ED4DD688F5A959B4B7D2 /* Delegate0TypeParamsTests.swift in Sources */,
-				2475E40997F5F5B589C62640 /* Delegate1TypeParamsTests.swift in Sources */,
+				2475ED4DD688F5A959B4B7D2 /* DelegateSeedTests.swift in Sources */,
+				2475E40997F5F5B589C62640 /* DelegateSeedGenericTypeTests.swift in Sources */,
+				2475EAD88770EF08518A9FB4 /* MapDelegateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
