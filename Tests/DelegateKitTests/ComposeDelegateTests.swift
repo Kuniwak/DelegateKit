@@ -9,7 +9,8 @@ class ComposeDelegateTests: XCTestCase {
 
         let holder = ComposeDelegateHolder()
         holder.delegates.add(
-            AnyWeakDelegateChain(wrapping: spy)
+            spy
+                .asWeak()
                 .compose { (number: Int) -> String in "NUMBER: \(number)" }
                 .asAny()
         )
@@ -22,7 +23,8 @@ class ComposeDelegateTests: XCTestCase {
 
     func testMemoryLeak() {
         var spy: ComposeDelegateUnitSpy! = ComposeDelegateUnitSpy()
-        let weakSpy = AnyWeakDelegateChain(wrapping: spy)
+        let weakSpy = spy
+            .asWeak()
             .compose { (number: Int) -> String in "NUMBER: \(number)" }
             .asAny()
 
