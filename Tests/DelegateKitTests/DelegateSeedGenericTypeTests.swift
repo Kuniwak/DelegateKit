@@ -9,9 +9,9 @@ class DelegateSeedGenericTypeTests: XCTestCase {
         let spy = GenericDelegateSpy<Void>()
 
         let holder = GenericDelegateHolder<Void>()
-        holder.delegates.append(spy.asAny())
+        holder.delegates.add(spy.asAny())
 
-        holder.notifyToDelegates(())
+        holder.notifyToDelegates(.x(()))
 
         XCTAssertEqual(spy.callArgs, [.didCall])
     }
@@ -50,12 +50,10 @@ class GenericDelegateSpy<T>: DelegateSeed {
 
 
 class GenericDelegateHolder<T> {
-    var delegates: [AnyDelegate<AnyGeneric<T>>] = []
+    let delegates = DelegateBag<AnyGeneric<T>>()
 
 
-    func notifyToDelegates(_ x: T) {
-        for delegate in self.delegates {
-            delegate.didCall(.x(x))
-        }
+    func notifyToDelegates(_ x: AnyGeneric<T>) {
+        self.delegates.didCall(x)
     }
 }

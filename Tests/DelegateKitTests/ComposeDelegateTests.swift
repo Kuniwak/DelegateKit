@@ -8,7 +8,7 @@ class ComposeDelegateTests: XCTestCase {
         let spy = ComposeDelegateUnitSpy()
 
         let holder = ComposeDelegateHolder()
-        holder.delegates.append(
+        holder.delegates.add(
             AnyWeakDelegateChain(wrapping: spy)
                 .compose { (number: Int) -> String in "NUMBER: \(number)" }
                 .asAny()
@@ -27,7 +27,7 @@ class ComposeDelegateTests: XCTestCase {
             .asAny()
 
         let holder = ComposeDelegateHolder()
-        holder.delegates.append(weakSpy)
+        holder.delegates.add(weakSpy)
 
         spy = nil
         XCTAssertTrue(weakSpy.isEmpty)
@@ -69,12 +69,10 @@ class ComposeDelegateUnitSpy: DelegateSeed {
 
 
 class ComposeDelegateHolder {
-    var delegates: [AnyDelegate<Int>] = []
+    let delegates = DelegateBag<Int>()
 
 
     func notifyToDelegates(_ source: Int) {
-        for delegate in self.delegates {
-            delegate.didCall(source)
-        }
+        self.delegates.didCall(source)
     }
 }

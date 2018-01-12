@@ -9,7 +9,7 @@ class DelegateSeedTests: XCTestCase {
         let spy = DelegateSeedSpy()
 
         let holder = DelegateSeedHolder()
-        holder.delegates.append(spy.asAny())
+        holder.delegates.add(spy.asAny())
 
         holder.notifyToDelegates(.a)
 
@@ -22,7 +22,7 @@ class DelegateSeedTests: XCTestCase {
         let weakSpy = spy!.asAny()
 
         let holder = DelegateSeedHolder()
-        holder.delegates.append(weakSpy)
+        holder.delegates.add(weakSpy)
 
         spy = nil
         XCTAssertTrue(weakSpy.isEmpty)
@@ -37,7 +37,6 @@ class DelegateSeedTests: XCTestCase {
 
 
 class DelegateSeedSpy: DelegateSeed {
-    // This code means that the delegate can take a Void parameter.
     typealias P = Event
 
 
@@ -73,14 +72,11 @@ class DelegateSeedSpy: DelegateSeed {
 class DelegateSeedHolder {
     typealias Event = DelegateSeedSpy.Event
 
-    // This is a declaration for the delegate. It means the delegate is a DelegateSeed1 and the delegate have
-    // no type parameters and the delegate take no parameters.
-    var delegates: [AnyDelegate<Event>] = []
+
+    var delegates = DelegateBag<Event>()
 
 
     func notifyToDelegates(_ event: Event) {
-        for delegate in self.delegates {
-            delegate.didCall(event)
-        }
+        self.delegates.didCall(event)
     }
 }
