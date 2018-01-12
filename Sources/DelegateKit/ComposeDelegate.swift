@@ -1,27 +1,27 @@
-public class ComposeDelegate<Source, Domain>: DelegateChain {
-    public typealias P = Source
+public class ComposeDelegate<Domain, Codomain>: DelegateChain {
+    public typealias P = Domain
 
 
-    private let domain: AnyDelegate<Domain>
-    private let block: (Source) -> Domain
+    private let codomain: AnyDelegate<Codomain>
+    private let block: (Domain) -> Codomain
 
 
     public var isEmpty: Bool {
-        return self.domain.isEmpty
+        return self.codomain.isEmpty
     }
 
 
     public init<Delegate: DelegateChain>(
         _ delegate: Delegate,
-        _ block: @escaping (Source) -> Domain
-    ) where Delegate.P == Domain {
-        self.domain = delegate.asAny()
+        _ block: @escaping (Domain) -> Codomain
+    ) where Delegate.P == Codomain {
+        self.codomain = delegate.asAny()
         self.block = block
     }
 
 
-    public func didCall(_ parameters: Source) {
-        self.domain.didCall(self.block(parameters))
+    public func didCall(_ parameters: Domain) {
+        self.codomain.didCall(self.block(parameters))
     }
 }
 
