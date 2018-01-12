@@ -25,7 +25,7 @@
 		2475E571C643E639ED7157D5 /* DelegateSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E77AB32D4A2552BBE97B /* DelegateSeed.swift */; };
 		2475E6DA9E2133910FE5EA62 /* DelegateKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E1D2D7A219204A171451 /* DelegateKit.swift */; };
 		2475E713B7B373C4D04A4FB1 /* ComposeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E8C4E888FBC69701ED05 /* ComposeDelegate.swift */; };
-		2475EAD88770EF08518A9FB4 /* MapDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E1ED6C812C7ED0950BAE /* MapDelegateTests.swift */; };
+		2475EAD88770EF08518A9FB4 /* ComposeDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E1ED6C812C7ED0950BAE /* ComposeDelegateTests.swift */; };
 		2475ED4DD688F5A959B4B7D2 /* DelegateSeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E18B7512E8CAC48331D1 /* DelegateSeedTests.swift */; };
 		2475ED86B719BDC9CF1799C5 /* DelegateChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E825B9CEF6AC1EE15A94 /* DelegateChain.swift */; };
 		2475EEB58A3509266290F725 /* AnyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EAAA219FF6F97D1E021F /* AnyDelegate.swift */; };
@@ -54,7 +54,7 @@
 /* Begin PBXFileReference section */
 		2475E18B7512E8CAC48331D1 /* DelegateSeedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateSeedTests.swift; sourceTree = "<group>"; };
 		2475E1D2D7A219204A171451 /* DelegateKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateKit.swift; sourceTree = "<group>"; };
-		2475E1ED6C812C7ED0950BAE /* MapDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDelegateTests.swift; sourceTree = "<group>"; };
+		2475E1ED6C812C7ED0950BAE /* ComposeDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeDelegateTests.swift; sourceTree = "<group>"; };
 		2475E77AB32D4A2552BBE97B /* DelegateSeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateSeed.swift; sourceTree = "<group>"; };
 		2475E825B9CEF6AC1EE15A94 /* DelegateChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateChain.swift; sourceTree = "<group>"; };
 		2475E8C4E888FBC69701ED05 /* ComposeDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeDelegate.swift; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 				OBJ_12 /* DelegateKitSimplestTests.swift */,
 				2475EBAE4EB990E586DF66BB /* DelegateSeedGenericTypeTests.swift */,
 				2475E18B7512E8CAC48331D1 /* DelegateSeedTests.swift */,
-				2475E1ED6C812C7ED0950BAE /* MapDelegateTests.swift */,
+				2475E1ED6C812C7ED0950BAE /* ComposeDelegateTests.swift */,
 			);
 			name = DelegateKitTests;
 			path = DelegateKitTests;
@@ -242,7 +242,7 @@
 				OBJ_27 /* DelegateKitSimplestTests.swift in Sources */,
 				2475ED4DD688F5A959B4B7D2 /* DelegateSeedTests.swift in Sources */,
 				2475E40997F5F5B589C62640 /* DelegateSeedGenericTypeTests.swift in Sources */,
-				2475EAD88770EF08518A9FB4 /* MapDelegateTests.swift in Sources */,
+				2475EAD88770EF08518A9FB4 /* ComposeDelegateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
