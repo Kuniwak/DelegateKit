@@ -30,7 +30,6 @@
 		2475ED86B719BDC9CF1799C5 /* DelegateChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E825B9CEF6AC1EE15A94 /* DelegateChain.swift */; };
 		2475EEB58A3509266290F725 /* AnyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EAAA219FF6F97D1E021F /* AnyDelegate.swift */; };
 		OBJ_21 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_27 /* DelegateKitSimplestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* DelegateKitSimplestTests.swift */; };
 		OBJ_29 /* DelegateKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "DelegateKit::DelegateKit::Product" /* DelegateKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +61,6 @@
 		2475EBAE4EB990E586DF66BB /* DelegateSeedGenericTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateSeedGenericTypeTests.swift; sourceTree = "<group>"; };
 		"DelegateKit::DelegateKit::Product" /* DelegateKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DelegateKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"DelegateKit::DelegateKitTests::Product" /* DelegateKitTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = DelegateKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_12 /* DelegateKitSimplestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateKitSimplestTests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,7 +95,6 @@
 		OBJ_11 /* DelegateKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_12 /* DelegateKitSimplestTests.swift */,
 				2475EBAE4EB990E586DF66BB /* DelegateSeedGenericTypeTests.swift */,
 				2475E18B7512E8CAC48331D1 /* DelegateSeedTests.swift */,
 				2475E1ED6C812C7ED0950BAE /* ComposeDelegateTests.swift */,
@@ -239,7 +236,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_27 /* DelegateKitSimplestTests.swift in Sources */,
 				2475ED4DD688F5A959B4B7D2 /* DelegateSeedTests.swift in Sources */,
 				2475E40997F5F5B589C62640 /* DelegateSeedGenericTypeTests.swift in Sources */,
 				2475EAD88770EF08518A9FB4 /* ComposeDelegateTests.swift in Sources */,
