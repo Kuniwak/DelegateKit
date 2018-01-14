@@ -9,7 +9,7 @@ class DelegateBagTests: XCTestCase {
         let spy = DelegateBagSpy()
 
         let holder = DelegateBagHolder()
-        holder.delegates.add(spy.asAny())
+        holder.delegates.add(spy.asWeak().asAny())
 
         holder.notifyToDelegates(.a)
 
@@ -19,7 +19,7 @@ class DelegateBagTests: XCTestCase {
 
     func testMemoryLeak() {
         var spy: DelegateBagSpy? = DelegateBagSpy()
-        let weakSpy = spy!.asAny()
+        let weakSpy = spy!.asWeak().asAny()
 
         let holder = DelegateBagHolder()
         holder.delegates.add(weakSpy)

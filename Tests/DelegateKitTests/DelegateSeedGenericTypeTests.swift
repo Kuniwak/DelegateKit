@@ -9,7 +9,7 @@ class DelegateSeedGenericTypeTests: XCTestCase {
         let spy = GenericDelegateSpy<Void>()
 
         let holder = GenericDelegateHolder<Void>()
-        holder.delegates.add(spy.asAny())
+        holder.delegates.add(spy.asWeak().asAny())
 
         holder.notifyToDelegates(.x(()))
 

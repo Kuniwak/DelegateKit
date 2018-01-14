@@ -9,7 +9,7 @@ class DelegateSeedTests: XCTestCase {
         let spy = DelegateSeedSpy()
 
         let holder = DelegateSeedHolder()
-        holder.delegate = spy.asAny()
+        holder.delegate = spy.asWeak().asAny()
 
         holder.notifyToDelegate(.a)
 
@@ -19,7 +19,7 @@ class DelegateSeedTests: XCTestCase {
 
     func testMemoryLeak() {
         var spy: DelegateSeedSpy? = DelegateSeedSpy()
-        let weakSpy = spy!.asAny()
+        let weakSpy = spy!.asWeak().asAny()
 
         let holder = DelegateSeedHolder()
         holder.delegate = weakSpy

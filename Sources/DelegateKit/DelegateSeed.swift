@@ -7,11 +7,6 @@ public protocol DelegateSeed: class {
 
 
 extension DelegateSeed {
-    public func asAny() -> AnyDelegate<P> {
-        return AnyDelegate(.head(AnyWeakDelegateChain<P>(wrapping: self)))
-    }
-
-
     public func asWeak() -> AnyWeakDelegateChain<P> {
         return AnyWeakDelegateChain(wrapping: self)
     }
