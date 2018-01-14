@@ -28,7 +28,7 @@ public class MapDelegate<Domain, Codomain>: DelegateChain {
 
 
 extension DelegateChain {
-    public func compose<AnotherParams>(
+    public func map<AnotherParams>(
         _ block: @escaping (AnotherParams) -> P
     ) -> MapDelegate<AnotherParams, P> {
         return MapDelegate<AnotherParams, P>(self, block)

@@ -10,7 +10,7 @@ class MapDelegateTests: XCTestCase {
         let holder = MapDelegateHolder()
         holder.delegate = spy
                 .asWeak()
-                .compose { (number: Int) -> String in "NUMBER: \(number)" }
+                .map { (number: Int) -> String in "NUMBER: \(number)" }
                 .asAny()
 
         holder.notifyToDelegates(123)
@@ -23,7 +23,7 @@ class MapDelegateTests: XCTestCase {
         var spy: MapDelegateSpy! = MapDelegateSpy()
         let weakSpy = spy
             .asWeak()
-            .compose { (number: Int) -> String in "NUMBER: \(number)" }
+            .map { (number: Int) -> String in "NUMBER: \(number)" }
             .asAny()
 
         let holder = MapDelegateHolder()
