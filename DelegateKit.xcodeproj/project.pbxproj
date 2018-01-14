@@ -63,6 +63,7 @@
 		2475E5A1586D7ACFE562F4D1 /* ZipDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipDelegateTests.swift; sourceTree = "<group>"; };
 		2475E61EAB6482D7800DC9B9 /* DelegateBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateBag.swift; sourceTree = "<group>"; };
 		2475E6F7BBA8B7E5416112F1 /* DelegateSeedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateSeedTests.swift; sourceTree = "<group>"; };
+		2475E6FCB7F55C71BBECDA72 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2475E77AB32D4A2552BBE97B /* DelegateSeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateSeed.swift; sourceTree = "<group>"; };
 		2475E825B9CEF6AC1EE15A94 /* DelegateChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateChain.swift; sourceTree = "<group>"; };
 		2475E8C4E888FBC69701ED05 /* MapDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +132,7 @@
 				OBJ_7 /* Sources */,
 				OBJ_10 /* Tests */,
 				OBJ_6 /* Package.swift */,
+				2475E6FCB7F55C71BBECDA72 /* README.md */,
 			);
 			name = "";
 			sourceTree = "<group>";

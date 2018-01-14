@@ -19,6 +19,22 @@ class MapDelegateTests: XCTestCase {
     }
 
 
+    func testMoreExample() {
+        let spy = MapDelegateSpy()
+
+        let holder = MapDelegateHolder()
+        holder.delegate = spy
+            .asWeak()
+            .map { (number: Int) -> String in "NUMBER: \(number)" }
+            .map { (number: Int) -> Int in number * 2 }
+            .asAny()
+
+        holder.notifyToDelegates(1)
+
+        XCTAssertEqual(spy.callArgs, [.didCall("NUMBER: 2")])
+    }
+
+
     func testMemoryLeak() {
         var spy: MapDelegateSpy! = MapDelegateSpy()
         let weakSpy = spy
@@ -36,6 +52,7 @@ class MapDelegateTests: XCTestCase {
 
     static var allTests = [
         ("testExample", testExample),
+        ("testMoreExample", testMoreExample),
         ("testMemoryLeak", testMemoryLeak),
     ]
 }
