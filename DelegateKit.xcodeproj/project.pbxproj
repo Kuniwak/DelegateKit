@@ -28,9 +28,9 @@
 		2475E47B1F0E0C5F98513F49 /* DelegateBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E61EAB6482D7800DC9B9 /* DelegateBag.swift */; };
 		2475E571C643E639ED7157D5 /* DelegateSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E77AB32D4A2552BBE97B /* DelegateSeed.swift */; };
 		2475E6DA9E2133910FE5EA62 /* DelegateKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E1D2D7A219204A171451 /* DelegateKit.swift */; };
-		2475E713B7B373C4D04A4FB1 /* ComposeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E8C4E888FBC69701ED05 /* ComposeDelegate.swift */; };
+		2475E713B7B373C4D04A4FB1 /* MapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E8C4E888FBC69701ED05 /* MapDelegate.swift */; };
 		2475EAD4B3930AA7F2AF8C75 /* DelegateSeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E6F7BBA8B7E5416112F1 /* DelegateSeedTests.swift */; };
-		2475EAD88770EF08518A9FB4 /* ComposeDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E1ED6C812C7ED0950BAE /* ComposeDelegateTests.swift */; };
+		2475EAD88770EF08518A9FB4 /* MapDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E1ED6C812C7ED0950BAE /* MapDelegateTests.swift */; };
 		2475ED4DD688F5A959B4B7D2 /* DelegateBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E18B7512E8CAC48331D1 /* DelegateBagTests.swift */; };
 		2475ED86B719BDC9CF1799C5 /* DelegateChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E825B9CEF6AC1EE15A94 /* DelegateChain.swift */; };
 		2475EEB58A3509266290F725 /* AnyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EAAA219FF6F97D1E021F /* AnyDelegate.swift */; };
@@ -58,14 +58,14 @@
 /* Begin PBXFileReference section */
 		2475E18B7512E8CAC48331D1 /* DelegateBagTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateBagTests.swift; sourceTree = "<group>"; };
 		2475E1D2D7A219204A171451 /* DelegateKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateKit.swift; sourceTree = "<group>"; };
-		2475E1ED6C812C7ED0950BAE /* ComposeDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeDelegateTests.swift; sourceTree = "<group>"; };
+		2475E1ED6C812C7ED0950BAE /* MapDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDelegateTests.swift; sourceTree = "<group>"; };
 		2475E353612F97AB6F36C6EF /* ZipDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipDelegate.swift; sourceTree = "<group>"; };
 		2475E5A1586D7ACFE562F4D1 /* ZipDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipDelegateTests.swift; sourceTree = "<group>"; };
 		2475E61EAB6482D7800DC9B9 /* DelegateBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateBag.swift; sourceTree = "<group>"; };
 		2475E6F7BBA8B7E5416112F1 /* DelegateSeedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateSeedTests.swift; sourceTree = "<group>"; };
 		2475E77AB32D4A2552BBE97B /* DelegateSeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateSeed.swift; sourceTree = "<group>"; };
 		2475E825B9CEF6AC1EE15A94 /* DelegateChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateChain.swift; sourceTree = "<group>"; };
-		2475E8C4E888FBC69701ED05 /* ComposeDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeDelegate.swift; sourceTree = "<group>"; };
+		2475E8C4E888FBC69701ED05 /* MapDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDelegate.swift; sourceTree = "<group>"; };
 		2475EAAA219FF6F97D1E021F /* AnyDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyDelegate.swift; sourceTree = "<group>"; };
 		2475EBAE4EB990E586DF66BB /* DelegateSeedGenericTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateSeedGenericTypeTests.swift; sourceTree = "<group>"; };
 		2475EFBF824B8350FB55F386 /* AnonymouseDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnonymouseDelegate.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 			children = (
 				2475EBAE4EB990E586DF66BB /* DelegateSeedGenericTypeTests.swift */,
 				2475E18B7512E8CAC48331D1 /* DelegateBagTests.swift */,
-				2475E1ED6C812C7ED0950BAE /* ComposeDelegateTests.swift */,
+				2475E1ED6C812C7ED0950BAE /* MapDelegateTests.swift */,
 				2475E6F7BBA8B7E5416112F1 /* DelegateSeedTests.swift */,
 				2475E5A1586D7ACFE562F4D1 /* ZipDelegateTests.swift */,
 			);
@@ -148,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				2475E1D2D7A219204A171451 /* DelegateKit.swift */,
-				2475E8C4E888FBC69701ED05 /* ComposeDelegate.swift */,
+				2475E8C4E888FBC69701ED05 /* MapDelegate.swift */,
 				2475E77AB32D4A2552BBE97B /* DelegateSeed.swift */,
 				2475E825B9CEF6AC1EE15A94 /* DelegateChain.swift */,
 				2475EAAA219FF6F97D1E021F /* AnyDelegate.swift */,
@@ -253,7 +253,7 @@
 			files = (
 				2475ED4DD688F5A959B4B7D2 /* DelegateBagTests.swift in Sources */,
 				2475E40997F5F5B589C62640 /* DelegateSeedGenericTypeTests.swift in Sources */,
-				2475EAD88770EF08518A9FB4 /* ComposeDelegateTests.swift in Sources */,
+				2475EAD88770EF08518A9FB4 /* MapDelegateTests.swift in Sources */,
 				2475EAD4B3930AA7F2AF8C75 /* DelegateSeedTests.swift in Sources */,
 				2475E215733A2467941DDAA2 /* ZipDelegateTests.swift in Sources */,
 			);
@@ -264,7 +264,7 @@
 			buildActionMask = 0;
 			files = (
 				2475E6DA9E2133910FE5EA62 /* DelegateKit.swift in Sources */,
-				2475E713B7B373C4D04A4FB1 /* ComposeDelegate.swift in Sources */,
+				2475E713B7B373C4D04A4FB1 /* MapDelegate.swift in Sources */,
 				2475E571C643E639ED7157D5 /* DelegateSeed.swift in Sources */,
 				2475ED86B719BDC9CF1799C5 /* DelegateChain.swift in Sources */,
 				2475EEB58A3509266290F725 /* AnyDelegate.swift in Sources */,

@@ -1,4 +1,4 @@
-public class ComposeDelegate<Domain, Codomain>: DelegateChain {
+public class MapDelegate<Domain, Codomain>: DelegateChain {
     public typealias P = Domain
 
 
@@ -30,7 +30,7 @@ public class ComposeDelegate<Domain, Codomain>: DelegateChain {
 extension DelegateChain {
     public func compose<AnotherParams>(
         _ block: @escaping (AnotherParams) -> P
-    ) -> ComposeDelegate<AnotherParams, P> {
-        return ComposeDelegate<AnotherParams, P>(self, block)
+    ) -> MapDelegate<AnotherParams, P> {
+        return MapDelegate<AnotherParams, P>(self, block)
     }
 }

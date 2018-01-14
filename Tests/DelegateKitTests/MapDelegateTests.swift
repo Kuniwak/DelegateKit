@@ -3,11 +3,11 @@ import DelegateKit
 
 
 
-class ComposeDelegateTests: XCTestCase {
+class MapDelegateTests: XCTestCase {
     func testExample() {
-        let spy = ComposeDelegateUnitSpy()
+        let spy = MapDelegateUnitSpy()
 
-        let holder = ComposeDelegateHolder()
+        let holder = MapDelegateHolder()
         holder.delegate = spy
                 .asWeak()
                 .compose { (number: Int) -> String in "NUMBER: \(number)" }
@@ -20,13 +20,13 @@ class ComposeDelegateTests: XCTestCase {
 
 
     func testMemoryLeak() {
-        var spy: ComposeDelegateUnitSpy! = ComposeDelegateUnitSpy()
+        var spy: MapDelegateUnitSpy! = MapDelegateUnitSpy()
         let weakSpy = spy
             .asWeak()
             .compose { (number: Int) -> String in "NUMBER: \(number)" }
             .asAny()
 
-        let holder = ComposeDelegateHolder()
+        let holder = MapDelegateHolder()
         holder.delegate = weakSpy
 
         spy = nil
@@ -42,7 +42,7 @@ class ComposeDelegateTests: XCTestCase {
 
 
 
-class ComposeDelegateUnitSpy: DelegateSeed {
+class MapDelegateUnitSpy: DelegateSeed {
     typealias P = String
 
 
@@ -68,7 +68,7 @@ class ComposeDelegateUnitSpy: DelegateSeed {
 
 
 
-class ComposeDelegateHolder {
+class MapDelegateHolder {
     var delegate: AnyDelegate<Int>?
 
 
