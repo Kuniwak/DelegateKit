@@ -5,7 +5,7 @@ import DelegateKit
 
 class MapDelegateTests: XCTestCase {
     func testExample() {
-        let spy = MapDelegateUnitSpy()
+        let spy = MapDelegateSpy()
 
         let holder = MapDelegateHolder()
         holder.delegate = spy
@@ -20,7 +20,7 @@ class MapDelegateTests: XCTestCase {
 
 
     func testMemoryLeak() {
-        var spy: MapDelegateUnitSpy! = MapDelegateUnitSpy()
+        var spy: MapDelegateSpy! = MapDelegateSpy()
         let weakSpy = spy
             .asWeak()
             .compose { (number: Int) -> String in "NUMBER: \(number)" }
@@ -42,7 +42,7 @@ class MapDelegateTests: XCTestCase {
 
 
 
-class MapDelegateUnitSpy: DelegateSeed {
+class MapDelegateSpy: DelegateSeed {
     typealias P = String
 
 
