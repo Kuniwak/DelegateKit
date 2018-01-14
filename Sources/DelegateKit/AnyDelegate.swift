@@ -1,4 +1,4 @@
-public class AnyDelegate<Params> {
+public class AnyDelegate<Params>: DelegateChain {
     private let chain: Chain<Params>
 
 
